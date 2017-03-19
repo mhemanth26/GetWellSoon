@@ -105,8 +105,8 @@ $(document).ready(function() {
 	    <div class="sub-head1">
 	        NITC HEALTH CENTER
 	    </div>
-	    <a class="sub-head2" href="../features/report.php">REPORTS</a>
-	    <a class="sub-head2" href="profile.php">PROFILE</a>
+	    <a class="sub-head2" href="yearly_report.php">REPORTS</a>
+            <a class="sub-head2" href="update_profile_admin.php">PROFILE</a>
 	    <a class="sub-head2" href="../lib/logout.php">LOGOUT</a>
 	</div>
 	<div id="table1">
@@ -127,7 +127,7 @@ $(document).ready(function() {
 			if ($conn->query($sql) == TRUE)
 			{
 				$_SESSION['item']++;
-				echo $_SESSION[item]++;
+				echo $_SESSION[item];
 				$_SESSION['temp_stat']=1;
 			}
 			else {?>

@@ -80,8 +80,8 @@ a:link{
             <div class="sub-head1">
                 NITC HEALTH CENTER
             </div>
-            <a class="sub-head2" href="../features/report.php">REPORTS</a>
-            <a class="sub-head2" href="profile.php">PROFILE</a>
+            <a class="sub-head2" href="yearly_report.php">REPORTS</a>
+            <a class="sub-head2" href="update_profile_admin.php">PROFILE</a>
             <a class="sub-head2" href="../lib/logout.php">LOGOUT</a>
         </div>
 	    <div class="body">
