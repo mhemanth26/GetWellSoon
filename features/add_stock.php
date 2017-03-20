@@ -41,7 +41,7 @@ if (!$_SESSION['temp_stat']==1) $_SESSION['item']=0;
 	margin-left: 20px;
 }
 .images_re{
-	padding-top: 250px;
+	padding-top: 10px;
 }
 .head{
     width: 100%;
@@ -70,6 +70,62 @@ a:link{
     text-decoration: blink;
 }
 </style>
+<style>
+	.btn {
+		background-color: #f5152c;
+padding: 10px;
+color: white;
+border-block-end-color: white;
+border-radius: 8px;
+width: auto;
+font-size: large;
+margin-left: 83.25%;
+margin-top: 10%;
+
+	}
+	.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+
+    }
+
+/* Modal Content */
+.modal-content {
+    background-image: url("../images/1.jpg") ;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 65%;
+    height: 70%;
+    border-radius: 25px;
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
 <script type="text/javascript">
 $(function() {
 	$( ".Datepicker" ).datepicker({ changeMonth: true, changeYear: true, showOtherMonths: true, selectOtherMonths: true, dateFormat:"dd-mm-yy"});
@@ -110,7 +166,7 @@ $(document).ready(function() {
 	    <a class="sub-head2" href="../lib/logout.php">LOGOUT</a>
 	</div>
 	<div id="table1">
-	Add Stock:-
+	
 	<?php
 	if(isset($_POST['insert']))
 	{
@@ -176,16 +232,44 @@ $(document).ready(function() {
 			}
 			$_SESSION['item']=0;
 			$_SESSION['temp_stat']=0;
+			
 		}
+		//header('location:'.$_SERVER['PHP_SELF']);
+      //die();
 	?>
+	<button id="mybtn" class="btn">add stock</button>
 	<form action="" method="post">
 		<input type="submit" name="confirm" value="Confirm" class="button" id="confrm">
 	</form>
+	<div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
 
 
 
-	<form action="" method="post">
-	    <table cellspacing=7>
+	<form action="" method="post" style="color:black;">
+	<br><br><br><br><br><br><br><br><br>
+		<pre style="display: inline;">	Date 		 	: 	</pre><input type="text" class='Datepicker' name="Date" size="15" maxlength="10">
+		<br><br><br>
+		<pre style="display: inline;">	Bill No 	 	: 	</pre><input type="text" name="BillNo" size="15">
+		<br><br><br>
+		<pre style="display: inline;">	Recieved From 		: 	</pre><input type="text" name="ReceivedFrom" size="15">
+		<br><br><br>
+		<pre style="display: inline;">	Medicine 		: 	</pre><input type="text" name="Medicine" size="15">
+		<br><br><br>
+		<pre style="display: inline;">	Batch No 		:	</pre><input type="text" name="BatchNo" size="15">
+		<br><br><br>
+		<pre style="display: inline;">	Expiry 			:	</pre><input type="text" class='Datepicker' name="Expiry"  size="15" maxlength="10">
+		<br><br><br>
+		<pre style="display: inline;">	Qty 			: 	</pre><input type="text" name="Qty" size="15">
+		<br><br><br>
+		<pre style="display: inline;">	Cost 			: 	</pre><input type="text" name="Cost" size="15">
+		<br><br><br>
+		<center><pre style="display: inline;">	</pre><input style="background-color: red;" type="submit" name="insert" value="Insert" class="button" ></center>
+	    <!--<table cellspacing=7>
 		<thead>
 			<tr>
 			<th>Date</th>
@@ -211,20 +295,61 @@ $(document).ready(function() {
 			<th><input type="submit" name="insert" value="Insert" class="button" ></th>
 		</tr>
 		</tbody>
-		</table>
+		</table>-->
 
 	</form>
+	
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+
+
+// Get the button that opens the modal
+var btn = document.getElementById("mybtn");
+var modal;
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+	modal = document.getElementById('myModal');
+	//span = document.getElementById('close');
+    modal.style.display = "block";
+    span.onclick = function() {
+	//alert(this.id);
+	//modal = document.getElementById('myModal<?php echo $row['BatchNo'];?>');
+
+    modal.style.display = "none";
+}
+}
+
+
+// When the user clicks on <span> (x), close the modal
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	//var modal = document.getElementById('myModal<?php echo $row['BatchNo'];?>');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
 	</div>
 	<div class="body">
 				<div class="images_re">
 			            <a href="../features/add_stock.php">
-			                <img src="../images/add stock.png" style="width:85%;"><br>
+			                <img src="../images/add stock.png" style="width:82%;"><br>
 			            </a>
 			            <a href="../features/remove_stock.php">
-			                <img src="../images/remove stock.png" style="width:85%;"><br>
+			                <img src="../images/remove stock.png" style="width:82%;"><br>
 			            </a>
 			            <a href="../features/view_stock.php">
-			                <img src="../images/view stock.png" style="width:85%;"><br>
+			                <img src="../images/view stock.png" style="width:82%;"><br>
 				        </a>
 				</div>
 	<div id="datatable1">

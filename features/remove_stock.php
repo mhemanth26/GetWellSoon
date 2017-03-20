@@ -11,7 +11,7 @@ else {
 }
 ?>
 <!doctype html>
-<html>
+<html> 
 <head>
 <meta charset="utf-8">
 <title>Remove Stock</title>
@@ -81,7 +81,7 @@ a:link{
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 65%;
     border-radius: 10px;
 }
 
