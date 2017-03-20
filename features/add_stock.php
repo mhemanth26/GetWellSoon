@@ -90,7 +90,7 @@ margin-top: 10%;
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 100%; /* Full width */ 
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
 
@@ -343,13 +343,13 @@ window.onclick = function(event) {
 	<div class="body">
 				<div class="images_re">
 			            <a href="../features/add_stock.php">
-			                <img src="../images/add stock.png" style="width:82%;"><br>
+			                <img src="../images/add stock.png" style="width:79%;"><br>
 			            </a>
 			            <a href="../features/remove_stock.php">
-			                <img src="../images/remove stock.png" style="width:82%;"><br>
+			                <img src="../images/remove stock.png" style="width:79%;"><br>
 			            </a>
 			            <a href="../features/view_stock.php">
-			                <img src="../images/view stock.png" style="width:82%;"><br>
+			                <img src="../images/view stock.png" style="width:79%;"><br>
 				        </a>
 				</div>
 	<div id="datatable1">
