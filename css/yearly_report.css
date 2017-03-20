@@ -26,12 +26,13 @@ body {
 #table1{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 28px;
-	color: rgb(255, 198, 2);
+	color: rgb(44, 95, 119);
 	line-height: 0.5;
-	text-align: left;
+	text-align: right;
 	position: absolute;
-	left: 90px;
-	top: 120px;
+	left: 0px;
+	padding-left: 330px;
+	top: 160px;
 	z-index: 2;
 }
 
@@ -63,7 +64,7 @@ body {
 	line-height: 0.5;
 	text-align: left;
 	position: relative;
-	left: 1099px;
+	left: 700px;
 	top: -40px;
 	z-index: 2;
 }
@@ -81,7 +82,7 @@ body {
 #year
 {
 	position: relative;
-	left: 520px;
+	left: 350px;
 	top: 30px;
 }
 
@@ -89,12 +90,12 @@ body {
 {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 20px;
-	color: #bbbbbb;
+	color: #215670;
 	line-height: 0.5;
 	text-align: left;
 	position: absolute;
-	left: 400px;
-	top: 200px;
+	left: 550px;
+	top: 240px;
 	z-index: 2;
 }
 
@@ -104,7 +105,7 @@ body {
 	border-spacing:3em;
 	position : relative;
 	left : 55px;
-	color : white;
+	color : #e5162b;
 }
 
 input[type="text"] 
@@ -116,7 +117,7 @@ input[type="text"]
 	outline: none;
 	border: initial;
 	border-radius: 5px;
-	background-color:#242424;
+	background-color:#215670;
 }
 
 input[type="submit"] 

@@ -24,7 +24,7 @@
 <head>
 <meta charset="utf-8">
 <title>Yearly Report</title>
-
+<link rel="icon" href="../images/Logo---307x275.png" type="image/gif" sizes="16x16">
 <!--CSS-->
 <link href="../css/yearly_report.css" rel="stylesheet" type="text/css">
 
@@ -40,23 +40,77 @@
 		}
 	}
 </script>
+<style type="text/css" class="init">
+.body{
+    display: flex;
+    padding-left: 20px;
+}
+.images_re{
+    padding-top: 10px;
+}
+.head{
+    width: 100%;
+    display: flex;
+    height: 110px;
+    font-family: "Lato",sans-serif;
+}
+.image1{
+    margin-left: 30px;
+    width: 120px;
+}
+.sub-head1{
+    width: 40%;
+    font-size: 40px;
+    margin-right: 240px;
+    margin-top: 30px;
+}
+.sub-head2{
+    color: black;
+    font-size: 20px;
+    width: 10%;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+a:link{
+    text-decoration: blink;
+}
+</style>
 
 </head>
 
 </head>
 
 <body>
-	<input type="button" class="home" value="" onClick="location.href='../home.php'">
-	<input type="button" class="logout" value="logout" onClick="location.href='../lib/logout.php'">
-	<div id="table1">
-	Yearly Report
-	<form action="" method="post" id="year">
-		<input id="input_year" type=text name="year" value=<?php if (!isset($_POST['year'])) echo $curr_year; else echo $_POST['year']; ?> size="4"/>
-		<input type=submit value="Go" size="5" onclick="validate()">
-	</form>
-	<a id="pdf_link" href="generate_pdf.php" target="_blank">Print</a>
-	</div>
-
+	<div>
+		<div class="head">
+            <img type="button" class="image1" src="../images/Logo---307x275.png" value=""  onClick="location.href='../home.php'">
+            <div class="sub-head1">
+                NITC HEALTH CENTER
+            </div>
+           <a class="sub-head2" href="yearly_report.php">REPORTS</a>
+            <a class="sub-head2" href="update_profile_admin.php">PROFILE</a>
+            <a class="sub-head2" href="../lib/logout.php">LOGOUT</a>
+        </div>
+	    <div class="body">
+			<div class="images_re">
+		            <a href="../features/add_stock.php">
+		                <img src="../images/add stock.png" style="width:80%;"><br>
+		            </a>
+		            <a href="../features/remove_stock.php">
+		                <img src="../images/remove stock.png" style="width:80%;"><br>
+		            </a>
+		            <a href="../features/view_stock.php">
+		                <img src="../images/view stock.png" style="width:80%;"><br>
+		            </a>
+		    </div>
+			<div id="table1">
+			Yearly Report
+			<form action="" method="post" id="year">
+				<input id="input_year" type=text name="year" value=<?php if (!isset($_POST['year'])) echo $curr_year; else echo $_POST['year']; ?> size="4"/>
+				<input type=submit value="Go" size="5" onclick="validate()">
+			</form>
+			<a id="pdf_link" href="generate_pdf.php" target="_blank">Print</a>
+			</div>
 <?php
 	/* Make sure that 2011 0 and 0 is in the Yearly Report table, otherwise there will be an error. 2011 because it is set as such
 	 * in the validate function. This initial data must be there in the database.
@@ -119,7 +173,7 @@
 
 
 	<div id="stmt">
-		<h1>Statement as on &nbsp; <span id="close_date" style="color:white">31-03-<?php if(!isset($_POST['year'])) echo $curr_year; else echo $_POST['year']; ?></span></h1>
+		<h1>Statement as on &nbsp; <span id="close_date" >31-03-<?php if(!isset($_POST['year'])) echo $curr_year; else echo $_POST['year']; ?></span></h1>
 		<table id="report_table">
 			<tr>
 				<td>Opening Balance </td>
@@ -146,5 +200,7 @@
 		$_SESSION['consumption']=$consumption;
 		$_SESSION['clbal']=$clbal;
 	?>
+	</div>
+	</div>
 </body>
 </html>
