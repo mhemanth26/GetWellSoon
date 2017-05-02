@@ -101,7 +101,7 @@ margin-top: 10%;
 
 /* Modal Content */
 .modal-content {
-    background-image: url("../images/1.jpg") ;
+    background-color: white;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -120,7 +120,7 @@ margin-top: 10%;
 
 .close:hover,
 .close:focus {
-    color: white;
+    color: rgb(100,100,100);
     text-decoration: none;
     cursor: pointer;
 }
