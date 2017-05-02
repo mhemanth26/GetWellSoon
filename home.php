@@ -121,20 +121,19 @@ $min_qty = 10;
 }
 
 /* The Close Button */
-.close {
+.close1 {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close1:hover,
+.close1:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-
 .ar{
   display: inline-block;
   width:80%;
@@ -190,12 +189,12 @@ $min_qty = 10;
         
         <td><center><?php echo date("d/m/Y",strtotime($row['Expiry']));?></center></td>
         
-        <td><center><button id="myBtn<?php echo $row['BatchNo'];?>1" class="btn waves-effect waves-light">details</button>
+        <td><center><button id="myBtn<?php echo $row['BatchNo'];?>1" >details</button>
           <div id="myModal<?php echo $row['BatchNo'];?>1" class="modal1">
 
 
   <div class="modal-content1">
-    <span id="close<?php echo $row['BatchNo'];?>1"; class="close">&times;</span>
+    <span id="close<?php echo $row['BatchNo'];?>1"; class="close1">&times;</span>
     
     <p style="display: inline;">MedicineName  :  </p><input type="hidden" name="MedicineName" value="<?php echo $row['MedicineName'];?>"><?php echo $row['MedicineName'];?>
     <br><br>
@@ -277,13 +276,13 @@ window.onclick = function(event) {
         
         <td><center><?php echo $row['Qty'];?></center></td>
         
-        <td><center><button id="myBtn<?php echo $row['BatchNo'];?>2" class="btn waves-effect waves-light">details</button>
+        <td><center><button id="myBtn<?php echo $row['BatchNo'];?>2" >details</button>
 
 <div id="myModal<?php echo $row['BatchNo'];?>2" class="modal1">
 
 
   <div class="modal-content1">
-    <span id="close<?php echo $row['BatchNo'];?>2"; class="close">&times;</span>
+    <span id="close<?php echo $row['BatchNo'];?>2"; class="close1">&times;</span>
     
     <p style="display: inline;">MedicineName  :  </p><input type="hidden" name="MedicineName" value="<?php echo $row['MedicineName'];?>"><?php echo $row['MedicineName'];?>
     <br><br>
