@@ -16,9 +16,7 @@ else
 {
 	header("location: ../index.php");
 }
-
 if (!$_SESSION['temp_stat']==1) $_SESSION['item']=0;
-
 ?>
 <!doctype html>
 <html>
@@ -71,59 +69,52 @@ a:link{
 }
 </style>
 <style>
-	.btn {
+.btn {
 		background-color: #f5152c;
-padding: 10px;
-color: white;
-border-block-end-color: white;
-border-radius: 8px;
-width: auto;
-font-size: large;
-margin-left: 83.25%;
-margin-top: 10%;
-
+		padding: 10px;
+		color: white;
+		border-block-end-color: white;
+		border-radius: 8px;
+		width: auto;
+		font-size: large;
+		margin-left: 535px;
 	}
 	.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */ 
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
-
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    padding-top: 100px; /* Location of the box */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */ 
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
     }
-
-/* Modal Content */
-.modal-content {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 65%;
-    height: 70%;
-    border-radius: 25px;
-}
-
-/* The Close Button */
-.close {
-    color: black;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: rgb(100,100,100);
-    text-decoration: none;
-    cursor: pointer;
-}
+	/* Modal Content */
+	.modal-content {
+	    background-color: white;
+	    margin: auto;
+	    padding: 20px;
+	    border: 1px solid #888;
+	    width: 65%;
+	    height: 70%;
+	    border-radius: 25px;
+	}
+	/* The Close Button */
+	.close {
+	    color: black;
+	    float: right;
+	    font-size: 28px;
+	    font-weight: bold;
+	}
+	.close:hover,
+	.close:focus {
+	    color: rgb(100,100,100);
+	    text-decoration: none;
+	    cursor: pointer;
+	}
 </style>
 
 <script type="text/javascript">
@@ -143,13 +134,9 @@ $(function() {
 	<script type="text/javascript" language="javascript" src="../jQueryAssets/datatables/js/shCore.js"></script>
 	<script type="text/javascript" language="javascript" src="../jQueryAssets/datatables/js/demo.js"></script>
 	<script type="text/javascript" language="javascript" class="init">
-
-
 $(document).ready(function() {
 	$('#data').DataTable();
 } );
-
-
 	</script>
 </head>
 
@@ -165,7 +152,8 @@ $(document).ready(function() {
             <a class="sub-head2" href="update_profile_admin.php">PROFILE</a>
 	    <a class="sub-head2" href="../lib/logout.php">LOGOUT</a>
 	</div>
-	<div id="table1">
+	<div class="body">
+		<div id="table1">
 	
 	<?php
 	if(isset($_POST['insert']))
@@ -177,7 +165,6 @@ $(document).ready(function() {
 				$expiry=date("Y-m-d", strtotime($_POST['Expiry']));
 			else
 				$expiry=date("Y-m-d", strtotime("+8 years"));
-
 			$sql = "INSERT INTO temp_medicine_stock VALUES ('{$date}','{$_POST['BillNo']}','{$_POST['ReceivedFrom']}','{$_POST['Medicine']}','{$_POST['BatchNo']}','{$expiry}','{$_POST['Qty']}','{$_POST['Cost']}');";
 			//echo $sql;
 			if ($conn->query($sql) == TRUE)
@@ -196,7 +183,6 @@ $(document).ready(function() {
 			echo "<script>alert('Batch No, Medicine Name, Purchase Date and Quantity fields are required. Quantity should be a positive number')</script>";
 		}
 	}
-
 	?>
 
 	<?php
@@ -305,8 +291,6 @@ $(document).ready(function() {
 
 <script>
 // Get the modal
-
-
 // Get the button that opens the modal
 var btn = document.getElementById("mybtn");
 var modal;
@@ -320,15 +304,10 @@ btn.onclick = function() {
     span.onclick = function() {
 	//alert(this.id);
 	//modal = document.getElementById('myModal<?php echo $row['BatchNo'];?>');
-
     modal.style.display = "none";
 }
 }
-
-
 // When the user clicks on <span> (x), close the modal
-
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 	//var modal = document.getElementById('myModal<?php echo $row['BatchNo'];?>');
@@ -340,7 +319,6 @@ window.onclick = function(event) {
 
 
 	</div>
-	<div class="body">
 				<div class="images_re">
 			            <a href="../features/add_stock.php">
 			                <img src="../images/add stock.png" style="width:79%;"><br>
@@ -352,7 +330,7 @@ window.onclick = function(event) {
 			                <img src="../images/view stock.png" style="width:79%;"><br>
 				        </a>
 				</div>
-	<div id="datatable1">
+	<div id="datatable1" class="tb">
 	<table id="data" class="display">
 		<thead>
 			<tr id="datatable2">

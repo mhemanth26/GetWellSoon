@@ -46,12 +46,11 @@ html, body {
 	font-size:20px;
 }
 #datatable1 {
-	position: absolute;
-	top: 420px;
+	margin-top: 320px;
 	font-size:16px;
-margin-right: 1%;
-padding-right: 5px
-overflow-y: scroll;
+	width: 80%;
+	overflow: auto;
+	padding-right: 50px;
 }
 
 #datatable2 {
@@ -143,7 +142,7 @@ input[type="search"] {
 	position: absolute;
 	padding: 10px 15px;
 	left: 540px;
-	top: 120px;
+	top: 60px;
 	background: #2c5f77;
 }
 #confiirm {

@@ -24,6 +24,7 @@ $row = mysqli_fetch_array($result);
 <head>
 <meta charset="utf-8">
 <title>Update Admin Profile</title>
+<link rel="icon" href="../images/Logo---307x275.png" type="image/gif" sizes="16x16">
 <link href="../css/update_profile.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
@@ -65,15 +66,58 @@ $row = mysqli_fetch_array($result);
 	}
 	?>
 </script>
+<style>
+.body{
+	display: flex;
+	margin-left: 20px;
+}
+.images_re{
+	padding-top: 10px;
+}
+.head{
+    width: 100%;
+    display: flex;
+    height: 110px;
+    font-family: "Lato",sans-serif;
+}
+.image1{
+    margin-left: 30px;
+    width: 120px;
+}
+.sub-head1{
+    width: 40%;
+    font-size: 40px;
+    margin-right: 240px;
+    margin-top: 45px;
+}
+.sub-head2{
+    color: black;
+    font-size: 20px;
+    width: 10%;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+a:link{
+    text-decoration: blink;
+}
+</style>
 
 </head>
 
 <body>
-<input type="button" class="home" value="" onClick="location.href='../home.php'">
-<input type="button" class="logout" value="logout" onClick="location.href='../lib/logout.php'">
+<div>
+	<div class="head">
+	    <img type="button" class="image1" src="../images/Logo---307x275.png" value=""  onClick="location.href='../home.php'">
+	    <div class="sub-head1">
+	        NITC HEALTH CENTER
+	    </div>
+	    <a class="sub-head2" href="yearly_report.php">REPORTS</a>
+            <a class="sub-head2" href="update_profile_admin.php">PROFILE</a>
+	    <a class="sub-head2" href="../lib/logout.php">LOGOUT</a>
+	</div>
 <div id="table1">
-	Update Profile
-	<form action="update.php" method="post" name="fields" onsubmit="return validate(this);">
+		Update Profile
+		<form action="update.php" method="post" name="fields" onsubmit="return validate(this);">
 		<div class="input_area">
 			<span>Name : </span><input name="name" type="text" class ="input_class_med" autocomplete="on" value="<?php echo $row['Name']; ?>" autofocus onfocus="var val=this.value; this.value=''; this.value= val;"> <br/>
 			<span>Username : </span><input name="username" type="text" class ="input_class_med" autocomplete="on" value="<?php echo $row['UserName']; ?>"><br>
@@ -88,10 +132,7 @@ $row = mysqli_fetch_array($result);
 		<div class="input_area">
 			<span>Security Qn1 :</span><textarea name="sec_qn_1" cols="37" rows="13" onfocus="var val=this.value; this.value=''; this.value= val;"><?php echo $row['SecQn1']; ?></textarea><br>
 			<span>Ans1 :</span><input name="ans1" type="password" class ="input_class_med" value="" autocomplete='off'><br>
-			<span>Security Qn2 :</span><textarea name="sec_qn_2" cols="37" rows="13" onfocus="var val=this.value; this.value=''; this.value= val;"><?php echo $row['SecQn2']; ?></textarea><br/>
-			<span>Ans2 :</span><input name="ans2" type="password" class ="input_class_med" value="" autocomplete='off'><br/><br/>
-
-			<span style="color:skyblue">Enter Password to save changes <sup style="color:red">*</sup> </span>
+			<span style="color:#f5f4f3;">Enter Password to save changes <sup style="color:red">*</sup> </span>
 			<br/>
 			<input name="pw" type="password" class ="input_class_med" autocomplete='off'>
 		</div>
@@ -101,7 +142,7 @@ $row = mysqli_fetch_array($result);
 	</form>
 
 </div>	
-
+</div>
 </body>
 </html>
 

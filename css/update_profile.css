@@ -59,29 +59,31 @@ body {
 form {
 	font-size: 25px;
 	color: rgb(255, 198, 2);
-	line-height: 200%;
+	line-height: 140%;
 	text-align: left;
 	position: absolute;
 	left: 25%;
-	top: 71px;
-	z-index: 2;
+	top: 40px;
 	width: 1053px;
-	height: 635px;
 	
 }
 
 .input_class_med {
+	font-family: 'Open Sans', sans-serif;
 	border: 0;
-	background-color: #262626;
+	background-color: #f5f4f3;
 	width: 300px;
 	font-size: 24px;
-	border-radius: 2px;
+	border-radius: 8px;
 	padding-left: 7px;
 	padding-top: 2px;
 	padding-right: 10px;
 	padding-bottom: 2px;
 	margin-left: 3px;
-	color: #fff;
+	color: black;
+	border: solid;
+    border-width: thin;
+    border-color: #a6a7a8;
 }
 
 .input_class_small {
@@ -153,12 +155,12 @@ input[type="submit"]{
 #table1{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 28px;
-	color: rgb(255, 198, 2);
+	color: #2c5f77;
 	line-height: 0.5;
 	text-align: left;
 	position: absolute;
 	left: 90px;
-	top: 100px;
+	top: 128px;
 	z-index: 2;
 }
 
@@ -169,7 +171,7 @@ input[type="submit"]{
 
 #table1 p
 {
-	color: rgb(255, 198, 2);
+	color: #2c5f77;
 	font-family:times;
 }
 
@@ -177,7 +179,7 @@ input[type="submit"]{
 {
 	position:relative;
 	left:8%;
-	color:skyblue;
+	color:#f5f4f3;
 	font-family:times;
 }
 
@@ -189,23 +191,25 @@ input[type="submit"]{
 }
 
 textarea {
-	font-family: times;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
-	border-radius: 2px;
+	border-radius: 8px;
 	padding-left: 7px;
 	padding-top: 2px;
 	padding-right: 10px;
 	padding-bottom: 2px;
 	margin-left: 10px;
-	color: #fff;
-	border: 0;
-	background-color: #262626;
+	color: black;
+	border: black;
+	background-color: #f5f4f3;
 	width:700px;
 	height:30px;
 	resize:none;
 	margin-left: 27px;
+	border: solid;
+    border-width: thin;
+    border-color: #a6a7a8;
 }
-
 span
 {
 	text-shadow: 1px 1px 0px #000000;display:inline;
